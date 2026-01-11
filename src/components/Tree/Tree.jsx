@@ -2,6 +2,11 @@ import { Link } from '../Link/Link';
 import './Tree.scss';
 import linksData from '../../api/links.json';
 
+const getImgPath = (path) => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return import.meta.env.BASE_URL + cleanPath;
+};
+
 export function Tree() {
   return (
     <div className="tree">
@@ -9,13 +14,18 @@ export function Tree() {
 
       <div className="tree__links">
         {linksData.map(link => (
-          <Link key={link.id} link={link} />
+          <Link key={link.id} 
+            link={{
+              ...link,
+              img: getImgPath(link.img)
+            }} 
+          />
         ))}
       </div>
 
       <a href="https://st.depositphotos.com/1020341/4773/i/450/depositphotos_47732415-stock-photo-funny-portrait-of-icelandic-horse.jpg" className="tree__additional">
         Дополнительно
-        <img src="/assets/arrow.png" alt="arrow.png" className="tree__additional-arrow" />
+        <img src={getImgPath('/assets/arrow.png')} alt="arrow.png" className="tree__additional-arrow" />
       </a>
     </div>
   );
