@@ -22,11 +22,6 @@ export function Tree() {
           />
         ))}
       </div>
-
-      <a href="https://st.depositphotos.com/1020341/4773/i/450/depositphotos_47732415-stock-photo-funny-portrait-of-icelandic-horse.jpg" className="tree__additional">
-        Дополнительно
-        <img src={getImgPath('/assets/arrow.png')} alt="arrow.png" className="tree__additional-arrow" />
-      </a>
     </div>
   );
 }

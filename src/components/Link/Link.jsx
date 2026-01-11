@@ -9,7 +9,6 @@ export const Link = ({ link }) => {
         className="link__img"
       />
       <h2 className="link__title">{link.title}</h2>
-      <p className="link__description">{link.description}</p>
       <a href={link.url} className="link__button">{link.buttonText}</a>
     </div>
   );
