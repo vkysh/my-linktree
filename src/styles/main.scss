@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+
+  background: url('/assets/bg-i-phone.png') center center / cover no-repeat fixed;
+  min-height: 100vh;
+  margin: 0;
+
+
+  @include on-tablet {
+    background-image: url('/assets/bg-i-tablet.png');
+  }
+
+  @include on-desktop {
+    background-image: url('/assets/bg-i-desktop.png');
+  }
+}

@@ -1,0 +1,92 @@
+.tree {
+  font-family: 'inter', sans-serif;
+
+  text-align: center;
+
+  @include content-padding-inline;
+
+  &__title {
+    margin: 37px 0 28px;
+    color: $text-color;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 35px rgba(231, 114, 18, 1);
+
+    @include on-tablet {
+      margin: 59px 0 58px;
+      font-size: 40px;
+    }
+
+    @include on-desktop {
+      margin: 72px 0 44px;
+      font-size: 56px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    @include on-tablet {
+      gap: 39px;
+    }
+
+    @include on-desktop {
+      gap: 30px;
+    }
+  }
+
+  &__additional {
+    @include smooth-scale(1.03, $effectDuration);
+
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    color: $text-color;
+    font-weight: bold;
+    font-size: 12px;
+
+    padding: 5px 9px;
+    margin-top: 21px;
+    margin-bottom: 72px;
+
+    background: linear-gradient(45deg, #3B6FEA, #E77212);
+    border: 1px solid $border-color;
+    border-radius: 300px;
+
+    @include on-tablet {
+      padding: 5px 19px;
+      font-size: 20px;
+      margin-bottom: 116px;
+      margin-top: 30px;
+    }
+
+    @include on-desktop {
+      padding: 7px 23px;
+      margin-bottom: 144px;
+      margin-top: 59px;
+    }
+  }
+
+  &__additional-arrow {
+    height: 8px;
+    width: 21px;
+    margin-inline: 7px;
+
+    @include on-tablet {
+      height: 17px;
+      width: 44px;
+    }
+
+    @include on-desktop {
+      height: 17px;
+      width: 44px;
+    }
+  }
+}
