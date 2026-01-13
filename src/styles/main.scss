@@ -11,14 +11,12 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color: red; 
-  overscroll-behavior: none;
+  //overscroll-behavior: none;
 }
 
-body {
-  background: url('/assets/bg-i-phone1.png') center center / max(100vw, 70vh) no-repeat;
+html {
+  background: url('/assets/bg-i-phone.png') center center / cover no-repeat fixed;
   margin: 0;
-
 
   @include on-tablet {
     background-image: url('/assets/bg-i-tablet.png');
